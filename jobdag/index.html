@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Input gegevens</title>
+    <!-- google font roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        textarea
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>VERKOOP UZELF IN KORTE ZINNEN</h1>
+    </header>
+    <main class="container">
+        <form action="verwerk.php" method="POST">
+            <fieldset class="idgegevens">
+                <legend>Uw naam graag</legend>
+                <input type="text" name="voornaam" placeholder="Voornaam" required maxlength="30">
+                <input type="text" placeholder="Achternaam" name="naam" required maxlength="30">
+            </fieldset>
+            <fieldset class="vragen">
+                <legend>5 open vragen</legend>
+                <span class="vraagtitel">Waarom webdevelopment?</span>
+                <label for="antwoord1">U hebt nog 250 tekens </label>
+                <textarea id="antwoord1" name="antw1" placeholder="Typ hier je antwoord..." maxlength="250">
+
+                </textarea>
+                <span class="vraagtitel">Voorkeur voor front/backend?</span>
+                <label for="antwoord2">U hebt nog 250 tekens</label>
+                <textarea id="antwoord2" name="antw2" placeholder="Typ hier je antwoord..." maxlength="250"></textarea>
+                <span class="vraagtitel">Wat zoek je in een bedrijf?</span>
+                <label for="antwoord3">U hebt nog 250 tekens </label>
+                <textarea id="antwoord3" name="antw3" placeholder="Typ hier je antwoord..." maxlength="250"></textarea>
+                <span class="vraagtitel">Belangrijkste waarden binnen bedrijf ?</span>
+                <label for="antwoord4">U hebt nog 250 tekens </label>
+                <textarea id="antwoord4" name="antw4" placeholder="Typ hier je antwoord..." maxlength="250"></textarea>
+            </fieldset>
+            <fieldset class="punten">
+                <legend>Zet je <strong>DRIE</strong> sterkste punten in de verf</legend>
+                <div class="selectcontainer">
+                <div>
+                <select class="firstskill" name="firstskill">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="jQuery">jQuery</option>
+                    <option value="Wordpress">Wordpress</option>
+                    <option value="PHP">PHP</option>
+                    <option value="MySQL">MySQL</option>
+                    <option value="Bootstrap">Bootstrap</option>
+                    <option value="Python">Python</option>
+                </select>
+                </div>
+                <div>
+                <select class="secondskill" name="secondskill">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="jQuery">jQuery</option>
+                    <option value="Wordpress">Wordpress</option>
+                    <option value="PHP">PHP</option>
+                    <option value="MySQL">MySQL</option>
+                    <option value="Bootstrap">Bootstrap</option>
+                    <option value="Python">Python</option>
+                </select>
+                </div>
+                <div>
+                <select class="thirdskill" name="thirdskill">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="jQuery">jQuery</option>
+                    <option value="Wordpress">Wordpress</option>
+                    <option value="PHP">PHP</option>
+                    <option value="MySQL">MySQL</option>
+                    <option value="Bootstrap">Bootstrap</option>
+                    <option value="Python">Python</option>
+                </select>
+                </div>
+                </div>
+                <!-- <input type="checkbox" name="checkbox[]" value="html">Html
+                <input type="checkbox" name="checkbox[]" value="css">CSS
+                <input type="checkbox" name="checkbox[]" value="javascript">JavaScript
+                <input type="checkbox" name="checkbox[]" value="wordpress">Wordpress
+                <input type="checkbox" name="checkbox[]" value="jquery">Jquery
+                <input type="checkbox" name="checkbox[]" value="php">PHP<br>
+                <input type="checkbox" name="checkbox[]" value="mysql">MySQL
+                <input type="checkbox" name="checkbox[]" value="bootstrap">Bootstrap
+                <input type="checkbox" name="checkbox[]" value="python">Python -->
+            </fieldset>
+            <fieldset>
+                <legend>Omschrijf jezelf in enkele zinnen</legend>
+                <label for="omschrijving"></label>
+                <textarea name="omschrijving" id="omschrijving">
+
+                </textarea>
+            </fieldset>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                Select image to upload:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload Image" name="submit">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <span class="copyright">&copy;students@webontwikkeling/Obelisk/Leuven</span>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function() {
+        console.log("waarom werkt hallo niet ?");
+        $("input:checkbox").click(function() {
+            // beperkt maximum aantal checkboxes
+            if ($("input:checkbox:checked").length > 3) {
+
+                alert("maximum drie keuzes");
+                return false;
+            }
+
+
+
+        });
+        // waardes hoeveelheid tekens antwoorden
+        $('textarea').on('input', updateCount);
+
+        function updateCount() {
+            var cs = [250 - $(this).val().length];
+            // $('.lenantw1').text(cs);
+            var label = $("label[for='" + $(this).attr('id') + "']");
+            label.text("u hebt nog " + cs + " tekens");
+        }
+
+    });
+    </script>
+</body>
+
+</html>
