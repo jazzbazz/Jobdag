@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Roboto&display=swap" rel="stylesheet">
+    <!-- own CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Students Simplest</title>
+    <style>
+        .round1 {
+            border: 3px solid skyblue;
+            background-color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="home.html"><img src="images/logo_kleur.png" alt="logo"></a></div>
+        <h1>Hello, Students!</h1>
+    </header>
+    <main class="container flexd2">
+        <p class="intro">
+            <h3>Please tell us more about yourself. Complete three simple steps to become a proud member of WEBO LEUVEN.</h3>
+        </p>
+        <div class="idinput">
+            <form action="verwerk1.php" method="POST">
+                <section>
+                    <p class="title">Gelieve uw voornaam en naam in te vullen</p>
+                    <input type="text" name="voornaam" placeholder=" Voornaam graag" required>
+                    <input type="text" name="naam" placeholder="Naam graag" required>
+                </section>
+                <section class="omschrijving">
+                    <p class="title">Als ik mezelf moet omschrijven in één zin, dan luidt deze....</p><input type="textarea" name="omschrijving" placeholder="Omschrijf u zelf in het kort" required>
+                </section>
+                <section class="heartbeat">
+                    <p class="title">My heart beats faster when I do...</p>
+                    <p class="radios">
+                    <input type="radio" name="heartbeat" value="frontend"> Front End<br>
+                    <input type="radio" name="heartbeat" value="backend"> Back End<br>
+                    <input type="radio" name="heartbeat" value="both"> Both
+                    </p>
+                </section>
+                <section><input type="submit" name="submit1"></section>
+            </form>
+            
+        </div>
+    </main>
+    <footer>
+        <section class=progressSection>
+            <span>progress</span>
+            <div class="proGress">
+                <div class="round1 round"></div>
+                <div class="round2 round"></div>
+                <div class="round3 round"></div>
+            </div>
+        </section>
+        <p>&copy;2019 Students WebOntwikkeling Leuven</p>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
