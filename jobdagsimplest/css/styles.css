@@ -1,0 +1,217 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+/************** DOCUMENTATION ********************/
+	/*Main colors: #50A3A2 #54A79B #62B68A*/ 
+ 	/*Accent Color:  #78CC6D*/
+ 	/*link cv https://ryancv.bslthemes.com/v1/ */
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+	/*font-family: 'Advent Pro', sans-serif;*/
+}
+
+/*GENERAL STYLES*/
+
+header, footer {
+	height: 120px;
+	display: flex;
+	background-color: rgba(111 ,111 ,111, 0.9);
+	color: white;
+	align-items: center;
+	text-align:center;
+}
+
+header {
+	position:relative;
+}
+
+footer p, header h1 {
+	text-align:center;
+	width: 100%;
+}
+
+header img {
+	display:block;
+	top:0;
+	left: 0;
+	height: 100px;
+	padding: 5px;
+	padding-left: 5vw;
+	position:absolute;
+}
+
+main {
+	min-height: calc(100vh - 240px);
+	border: 5px solid gold;
+}
+.flexd {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+main .butn {
+	border: 2px solid darkorange;
+	cursor:pointer;
+	width: 180px;
+	height: 40px;
+	margin:0 15px;
+	line-height: 40px;
+	font-size: 1.3rem;
+	text-align:center;
+	background-color: rgba(251 ,251 ,251, 0.5);
+}
+
+/* BACKGROUND IMAGE*/
+.bg {
+	background-image: url('../images/studentswebdesign.jpg');
+	background-position:center;
+	background-size: cover;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:0;
+	left: 0;
+	width: 100vw;
+	height:100vh;
+	border: 1px solid limegreen;
+	z-index:-2;
+
+}
+
+/* STUDENTS STYLE*/
+
+section .title,.intro, .radios {
+	margin-top :20px;
+	margin-bottom: 0.3rem;
+	
+}
+
+main h3 {
+	width: 60%;
+	text-align:center;
+	margin: 0 auto;
+}
+
+input[type="text"], input[type="textarea"]{
+	height: 40px;
+	/*border-bottom: 2px solid gold;*/
+}
+input[name="voornaam"]{
+	border-bottom:1px solid gold;
+	width: 35%;
+}
+input[name="naam"]{
+	border-bottom: 1px solid darkorange;
+	width: 52%;
+	margin-left: 2%;
+}
+input[type="textarea"]{
+	width: 89%;
+	border: 1px solid gold;
+}
+.heartbeat {
+	display:flex;
+}
+.radios {
+	margin-left: 20px;
+
+}
+input[type="submit"]{
+	margin: 20px auto;
+	height: 40px;
+	width: 180px;
+	background: darkgreen;
+	color: white;
+	display: block;
+}
+
+/* progress in footer */
+
+footer {
+	flex-direction: column;
+}
+
+footer .progressSection {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.round {
+	width: 20px;
+	height: 20px;
+	border: 1px solid skyblue;
+	background-color: gold;
+	border-radius: 50%;
+	margin: 0 3px;
+}
+
+.proGress {
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+
+/* PAGE STUDENTSII */
+select {
+	display: inline;
+	width: 15vw;
+	margin: 20px 0;
+}
+.selectcontainer {
+	display: flex;
+	justify-content: space-around;
+}
+
+/* PAGE IMAGEUPLOAD */
+.imageupload form {
+	min-height: 50vh;
+	margin:auto;
+	border: 1px solid gold;
+	width: 60vw;
+
+}
+
+fieldset.imgupload {
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#fileToUpload {
+	border: 3px solid firebrick;
+	display: block;
+}
+
+#imageSubmitter {
+	width: 130px;
+	border: 3px solid darkorange;
+	display:block;
+}
+
+
+
+.imagefit {
+      width: 200px;
+      height: 200px;
+      border: 3px solid firebrick;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      /*possible values, cover, contain, scale-down, fill*/
+   }
+   .imagefit img {
+    object-fit:cover;
+	width: 180px;
+	height: 180px;
+	display: block;
+	border: 2px solid silver;
+  }
+
